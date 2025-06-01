@@ -27,6 +27,8 @@ const (
 	OpenRouterQwen30B        ModelID = "openrouter.qwen-3-30b"
 	OpenRouterQwen14B        ModelID = "openrouter.qwen-3-14b"
 	OpenRouterQwen8B         ModelID = "openrouter.qwen-3-8b"
+	OpenRouterLlamaMaverick         ModelID = "openrouter.llama-4-maverick"
+
 )
 
 var OpenRouterModels = map[ModelID]Model{
@@ -323,5 +325,17 @@ var OpenRouterModels = map[ModelID]Model{
 		CostPer1MOutCached: 0.138,
 		ContextWindow:      128000,
 		DefaultMaxTokens:   4096,
+	},
+	OpenRouterLlamaMaverick: {
+		ID:                 OpenRouterLlamaMaverick,
+		Name:               "OpenRouter: Llama 4 maverick",
+		Provider:           ProviderOpenRouter,
+		APIModel:           "meta-llama/llama-4-maverick",
+		CostPer1MIn:        0.16,
+		CostPer1MInCached:  0.16,
+		CostPer1MOut:       0.60,
+		CostPer1MOutCached: 0.60,
+		ContextWindow:      1048576,
+		DefaultMaxTokens:   16384,
 	},
 }
