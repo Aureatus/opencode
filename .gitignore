@@ -44,3 +44,6 @@ Thumbs.db
 .opencode/
 # ignore locally built binary
 opencode*
+
+# Ignore config (generated from a template in our workflow)
+.opencode.json
